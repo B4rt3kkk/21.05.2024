@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ćwiczenia</title>
+</head>
+    <body style="font-family:sans-serif;">
+
+        <fieldset style="border-radius: 20px;width: 600px;padding: 20px;margin: auto; text-align: center; color: olive; margin-top: 10%;">
+
+            <legend><b>JavaScript to super język</b></legend>
+
+            <div style="width: 600px; padding: 20px; border-radius: 20px; background-color: olive; color: white;box-shadow: 0px 3px 3px gray;">
+
+                <form name="dane" id="dane">
+                    <select name="dane" id="dane" style="width: 30%; height: 50px; text-align: center;background-color:goldenrod; color: white; border-radius: 20px;">
+                        <option value="arek">item 1</option>
+                        <option value="bartek">item 2</option>
+                        <option value="miłosz">item 3</option>
+                        <option value="tycjan">item 4</option>
+                        <option value="konrad">item 5</option>
+                    </select>
+                </form>
+
+            </div>
+
+        </fieldset>
+
+        <div id="wynik" style="box-shadow: 0px 3px 3px gray; border-radius: 20px; width: 644px; padding: 20px; margin: auto; text-align: center; background-color:goldenrod; color: white; margin-top: 5%;">
+        
+        </div>
+
+        <script>
+            let mySelect = document.getElementById("dane");
+            // mySelect.addEventListener("change",function(){}) !!! JEDEN Z PRZYKŁADÓW !!!
+            mySelect.addEventListener("change",(event)=>{
+                let wynik = document.getElementById("wynik");
+                wynik.innerHTML = event.target.value;
+            })
+
+        </script>
+
+    </body>
+</html>
